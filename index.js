@@ -5,10 +5,10 @@ const sulla = require("sulla")
 
 sulla.create().then((client) => start(client))
 
-function start(client) {
-    client.onMassage(message)=> {
-        if (message.body === "Hi") {
-            client.sendText(message.from, "😁 hello from sulla")
+function start (client){
+    client.onMassage((message)=>{
+        if(message.body == "Hi"){
+            client.sentText(message.from, " 😁 hello from sulla")
         }
-    }
+    })
 }
